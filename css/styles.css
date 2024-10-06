@@ -1,0 +1,245 @@
+*  {
+  font-family: sans-serif;
+}
+.home {
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+}
+.home > .menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  margin: 0 auto;
+}
+@media (min-width: 600px) {
+  .home > .menu {
+    max-width: 80%;
+  }
+  .home > .menu > div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.home > .menu > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.home > .menu > div > div {
+  width: 140px;
+  margin: 10px;
+  background-color: #eef;  
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home > .menu > div > div > div {
+  width: 100px;
+  height: 100px;
+  max-height: 100px;
+  padding: 20px;
+}
+
+.home > .menu > div > div > p {
+  font-weight: 500;
+  font-variant: small-caps;
+  margin-top: 0;
+  padding-top: 1em;
+  border-top: 1px solid #ccc;
+}
+
+
+.home > .float {
+  position:fixed;
+	width:60px;
+	height:60px;
+	bottom:10px;
+	right:10px;
+	background-color:lightgray;
+	color:#FFF;
+	border-radius:50%;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+.home > .float > div > img {
+  padding: 1.2em;
+  width: 1.5em;
+  height: 1.5em;
+}
+.challenge {
+  display: none;
+}
+.top {
+  position: absolute;
+  display: flex;
+}
+.top > div {
+  border: 1px black dotted;
+  width: 20px;
+  text-align: right;
+  margin: 2px;
+  padding: 2px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+@media (min-width: 600px) {
+  .container {
+    max-width: 80%;
+  }
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 2px;
+  width: 100%;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.main {
+  font-family: "major";
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  font-size: 2em;
+}
+.question {
+  padding-top: 30px;
+  width: 30%;
+}
+.question-right {
+  font-weight: bold;
+  width: 40%;
+  text-align: left;
+}
+.question-right #wrong {
+  text-decoration: line-through;
+  color: red;
+}
+
+.question-right #right {
+  color: blue;
+}
+
+.question-right .good {
+  color: green;
+  font-weight: bold;
+}
+.question-right #message {
+  font-weight: normal;
+  font-size: smaller;
+}
+
+
+.notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.notes > div {
+  display: flex;
+  align-items: center;
+  width: 26%;
+  height: 50px;
+  margin: 10px;
+  background-color: #ddd;
+}
+.notes > div > button {
+  font-size: 2em;
+  text-align: center;
+  width: 100%;
+  border: 0;
+  background-color: inherit;
+  cursor: pointer;
+}
+.notes img {
+    width: 0.8em;
+    height: 0.8em;
+}
+#start {
+    display: none;
+}
+#stop {
+    display: inline;
+}
+
+.abcjs-note_selected {
+  fill: black;
+}
+
+#music {
+  width: 500px;
+  min-height: 225px;
+  margin: auto;
+  text-align: center;
+}
+#partition {
+  padding-left: 170px;
+}
+
+#reponse {
+  font-size: 24pt;
+}
+
+.answer {
+  font-weight: bold;
+  color: blue;
+}
+.good {
+  color: green;
+}
+.bad {
+  color: red;
+}
+
+.score {
+  font-variant-numeric: tabular-nums;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  max-width: 400px;
+}
+.score p {
+  border: 1px solid #ccc;
+  padding: .5em;
+  margin: 0;
+  min-width: 75px;
+  background-color: #eee;
+}
+.score span { font-weight: bold; }
+
+.timer {
+  font-variant-numeric: tabular-nums;
+  font-weight: bold;
+  font-size: 20pt;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+.timer.really.slow {
+  color: red;
+}
+.timer.slow {
+  color: #f90;
+}
+.average-time {
+  font-variant-numeric: tabular-nums;
+  font-size: 8pt;
+  position: fixed;
+  top: 50px;
+  left: 10px;
+}

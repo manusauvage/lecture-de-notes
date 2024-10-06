@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="black"/>
+  <title>Entraînement à la lecture de notes</title>
+  <meta name="description" content="Entraînement à la lecture de notes"/>
+  <link rel="icon" href="icon/icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icon/apple-icon-180x180.png">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="home">
+    <h1>Quelle clé veux-tu travailler ?</h1>
+    <div class="menu">
+      <div>
+        <div onclick="begin('sol');"><div id="lecture-sol"></div><p>Clé de SOL</p></div>
+        <div onclick="begin('fa'); "><div id="lecture-fa"></div><p>Clé de FA</p></div>
+        <div onclick="begin('ut3');"><div id="lecture-ut3"></div><p>Clé d'UT3</p></div>
+        <div onclick="begin('ut4');"><div id="lecture-ut4"></div><p>Clé d'UT4</p></div>
+      </div>
+      <div id="test"></div>
+    </div>
+  </div>
+  <div class="challenge">
+    <div class="score"><p>Réussites : <span class="good">0</span></p><p>Erreurs : <span class="bad">0</span></p></div>
+    <div class="timer">0:00</div>
+    <div class="average-time">Moyenne des temps de réponse : <span id="avg-time-value">-</span></div>
+    <div class="container">
+      <div id="music">
+        <h1>Quelle est cette note ?</h1>
+        <div id="partition"></div>
+        <p id="reponse">&nbsp;</p>
+      </div>
+      <div class="notes">
+        <div>
+          <button onclick="clickNote('C')">DO</button>
+        </div>
+        <div>
+          <button onclick="clickNote('D');">RÉ</button>
+        </div>
+        <div>
+          <button onclick="clickNote('E');">MI</button>
+        </div>
+        <div>
+          <button onclick="clickNote('F');">FA</button>
+        </div>
+        <div>
+          <button onclick="clickNote('G');">SOL</button>
+        </div>
+        <div>
+          <button onclick="clickNote('A');">LA</button>
+        </div>
+        <div>
+          <button onclick="menu();" title="Retour au choix de clé"><img src="icon/home.svg" width="0.8em" height="0.8em" alt="Retour au choix de clé" /></button>
+        </div>
+        <div>
+          <button onclick="clickNote('B');">SI</button>
+        </div>
+        <div>
+          <button id="next" onclick="next();" title="passer à une autre note"><img src="icon/skip.svg" width="0.8em" height="0.8em" alt="passer à une autre note" /></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">Entraînement à la lecture de notes (<a href="https://github.com/manusauvage/lecture-de-notes" title="accéder au code source sur github">code source</a>)</div>
+</body>
+<script src="js/abcjs-basic-min.js" defer></script>
+<script src="js/notes.js" defer></script>
+</html>
